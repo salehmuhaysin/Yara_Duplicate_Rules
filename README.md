@@ -25,6 +25,19 @@ required arguments:
 
 the output will be written to the <OUT_FILE> file contain the "imports" and "rules"
 
+NOTE:
 
-
+the output is only rules and imports, so any comments outside the rule body will not exported,
+example:
+```
+/*
+    This is a multi-line comment ... (not incuded)
+*/
+Import “pe”
+rule CommentExample   // ... and this is single-line comment
+{
+    condition:
+       false  // just an dummy rule, don't do this
+} // rule end (not included)
+```
 
