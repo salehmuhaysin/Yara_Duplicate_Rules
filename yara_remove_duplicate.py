@@ -1,10 +1,7 @@
 
 
-# requirements: 
-# pip install yara-python
 
 import argparse
-import yara
 
 
 # ======================= Arguments =========================# 
@@ -13,9 +10,9 @@ a_parser = argparse.ArgumentParser('Python script tool remove duplicate rules fr
 
 requiredargs = a_parser.add_argument_group('required arguments')
 requiredargs.add_argument('-i', dest='in_file', help='Input Yara file', required=True)
-a_parser.add_argument('-o' , dest='out_file' , help='output Yara file with no duplication', required=True)
-a_parser.add_argument('-v' , dest='verbose' , help='print more details' , action='store_true')
-a_parser.add_argument('-nh' , dest='no_header' , help='Dont print the header' , action='store_true')
+requiredargs.add_argument('-o' , dest='out_file' , help='output Yara file with no duplication', required=True)
+a_parser.add_argument('-v' , dest='verbose' , help='print more details (default disabled)' , action='store_true')
+a_parser.add_argument('-nh' , dest='no_header' , help='Dont print the header (default enabled)' , action='store_true')
 
 
 args = a_parser.parse_args()
