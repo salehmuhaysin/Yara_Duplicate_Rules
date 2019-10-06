@@ -27,7 +27,7 @@ the output will be written to the <OUT_FILE> file contain the "imports" and "rul
 
 NOTE:
 
-the output is only rules and imports, so any comments outside the rule body will not exported,
+The output only contains rules and imports, so any comments outside the rule body will not exported,
 example:
 ```
 /*
